@@ -7,8 +7,9 @@ public class MouseFollower : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		Vector3 pz = Camera.main.ScreenToWorldPoint (Input.mousePosition);
-		pz.z = 0;
-		gameObject.transform.position = pz;
+        //if tocando pantalla
+	    	Vector3 pz = Camera.main.ScreenToWorldPoint (Input.mousePosition/*posicion del dedo*/);
+	    	pz.z = 0;
+		    gameObject.transform.position = pz;
 	}
 }
