@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Sniper
   m_EditorClassIdentifier: 
   fireRate: 0
-  bulletPrefab: {fileID: 0}
+  bulletPrefab: {fileID: 5878037606933123643, guid: 94ea8504e59a22043a9f00bb15b4749c,
+    type: 3}

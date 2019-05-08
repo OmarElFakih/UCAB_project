@@ -57,11 +57,20 @@ public class TargetedRotation : MonoBehaviour
 
 
 
-    public enum ForwardSide
+  /*  public enum ForwardSide
     {
         Top,
         Right,
         Buttom,
         Left
-    }
+    }*/
+}
+
+
+public enum ForwardSide
+{
+    Top,
+    Right,
+    Buttom,
+    Left
 }

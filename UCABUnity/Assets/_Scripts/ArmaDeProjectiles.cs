@@ -11,6 +11,10 @@ public class ArmaDeProjectiles : Arma
 
     public override void Disparar(Transform transform)
     {
-        Instantiate(bulletPrefab, transform.position, transform.rotation);
+        Vector3 bulletRotation = transform.eulerAngles;
+        bulletRotation.z -= 90;
+
+
+        Instantiate(bulletPrefab, transform.position, Quaternion.Euler(bulletRotation));
     }
 }
