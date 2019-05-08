@@ -1030,11 +1030,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25b64cb931c69c34d8da45a1a501d1ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
-  pauseMenuUI: {fileID: 2076800725}
-  escena: 
-=======
->>>>>>> master
 --- !u!1 &1990310470
 GameObject:
   m_ObjectHideFlags: 0
