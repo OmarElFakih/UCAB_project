@@ -15,7 +15,7 @@ public class MenuPausa : MonoBehaviour
     void Update()
     {
        
-       // if (Input.GetKeyDown(KeyCode.Escape))
+      /* // if (Input.GetKeyDown(KeyCode.Escape))
        if (Input.touchCount > 0)
         {
             if (GamePaused)
@@ -25,7 +25,7 @@ public class MenuPausa : MonoBehaviour
             {
                 Pause();
             }
-        }
+        }*/
     }
     // Nota = Es para teclado de pc. No es obligatorio, creo.
     

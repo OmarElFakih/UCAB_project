@@ -16,6 +16,7 @@ public class Singleton : MonoBehaviour
         }
         else
         {
+            if(instancia != this)
             Destroy(this.gameObject);
         }
     }
