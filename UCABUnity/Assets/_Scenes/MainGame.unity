@@ -594,6 +594,7 @@ GameObject:
   - component: {fileID: 1223547823}
   - component: {fileID: 1223547822}
   - component: {fileID: 1223547821}
+  - component: {fileID: 1223547824}
   m_Layer: 0
   m_Name: soldier_2h
   m_TagString: Untagged
@@ -679,6 +680,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1223547824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1223547820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14ab971524f38fe458e9c0d1c7cddf64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  arma: {fileID: 11400000, guid: e8f6b67e3ed9ca744a3b34cb4cb11769, type: 2}
 --- !u!1 &1413666726
 GameObject:
   m_ObjectHideFlags: 0
@@ -1016,8 +1030,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25b64cb931c69c34d8da45a1a501d1ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   pauseMenuUI: {fileID: 2076800725}
   escena: 
+=======
+>>>>>>> master
 --- !u!1 &1990310470
 GameObject:
   m_ObjectHideFlags: 0
