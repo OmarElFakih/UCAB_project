@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SeccionDeZombie : ShootingTarget
 {
-    [SerializeField] private float dmMultiplier = 0f;
+    [SerializeField] private float dmMultiplier = 1f;
 
     private Zombie parent = null;
 
@@ -15,6 +15,6 @@ public class SeccionDeZombie : ShootingTarget
 
     public override void GetShot(bullet bullet)
     {
-        
+        parent.currentHealth -= 1 * dmMultiplier;
     }
 }
