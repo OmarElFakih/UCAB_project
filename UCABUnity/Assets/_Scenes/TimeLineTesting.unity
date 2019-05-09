@@ -386,7 +386,6 @@ GameObject:
   - component: {fileID: 546784741}
   - component: {fileID: 546784743}
   - component: {fileID: 546784742}
-  - component: {fileID: 546784745}
   m_Layer: 0
   m_Name: ControlDeZombies
   m_TagString: Untagged
@@ -434,7 +433,7 @@ PlayableDirector:
   m_GameObject: {fileID: 546784740}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: 747c40fa22f559046bef34a4b8df1dae, type: 2}
+  m_PlayableAsset: {fileID: 11400000, guid: 1c7f8b7c3b6714342aece0b4743a95a5, type: 2}
   m_InitialState: 1
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
@@ -446,6 +445,8 @@ PlayableDirector:
     value: {fileID: 1732246257}
   - key: {fileID: 114723988204817146, guid: 747c40fa22f559046bef34a4b8df1dae, type: 2}
     value: {fileID: 242431397}
+  - key: {fileID: 114631364985392176, guid: 1c7f8b7c3b6714342aece0b4743a95a5, type: 2}
+    value: {fileID: 242431396}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &546784744
@@ -462,20 +463,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &546784745
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 546784740}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 08beebfbb1f98dd42b020742796a07da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TA: {fileID: 11400000, guid: 1c7f8b7c3b6714342aece0b4743a95a5, type: 2}
-  TB: {fileID: 11400000, guid: 747c40fa22f559046bef34a4b8df1dae, type: 2}
 --- !u!1 &924614719
 GameObject:
   m_ObjectHideFlags: 0
@@ -654,7 +641,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 546784745}
+      - m_Target: {fileID: 0}
         m_MethodName: ChangeTimeline
         m_Mode: 1
         m_Arguments:
