@@ -15,6 +15,10 @@ public class SeccionDeZombie : ShootingTarget
 
     public override void GetShot(bullet bullet)
     {
-        parent.currentHealth -= 1 * dmMultiplier;
+        parent.Damage(bullet.damage * dmMultiplier);
+        Destroy(bullet.gameObject);
     }
+
+
+
 }

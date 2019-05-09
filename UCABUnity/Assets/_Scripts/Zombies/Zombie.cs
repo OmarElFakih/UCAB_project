@@ -4,17 +4,21 @@ using UnityEngine;
 
 public class Zombie : MonoBehaviour
 {
-    [SerializeField] private float MaxHealth;
-    [HideInInspector] public float currentHealth;
+    [SerializeField] private float MaxHealth = 1;
+    [SerializeField] private float currentHealth = 0;
 
 
-    private void Update()
+
+    public void Damage(float amount)
     {
-        
+        currentHealth -= amount;
+        if (currentHealth <= 0)
+        {
+            ControlDeZombies.CZ.ZombieDied();
+            //ControlDejuego.addScore
+            gameObject.SetActive(false);
+        }
     }
 
-    private void AIUpdtaer() {
-        //
-
-    }
+    
 }
