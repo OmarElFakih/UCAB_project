@@ -14,7 +14,6 @@ public class ArmaDeProjectiles : Arma
         Vector3 bulletRotation = transform.eulerAngles;
         bulletRotation.z -= 90;
 
-
         Instantiate(bulletPrefab, transform.position, Quaternion.Euler(bulletRotation));
     }
 }

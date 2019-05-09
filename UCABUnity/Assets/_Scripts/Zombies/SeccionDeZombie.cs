@@ -19,6 +19,15 @@ public class SeccionDeZombie : ShootingTarget
         Destroy(bullet.gameObject);
     }
 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        Jugador j = other.GetComponent<Jugador>();
+        if (j != null)
+            j.Damage(parent.damage);
+        ControlDeZombies.CZ.ZombieDied();
+        parent.gameObject.SetActive(false);
+    }
+
 
 
 }

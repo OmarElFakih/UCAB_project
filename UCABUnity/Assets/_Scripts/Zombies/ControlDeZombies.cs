@@ -40,7 +40,7 @@ public class ControlDeZombies : MonoBehaviour
         livingZombies -= 1;
         if (livingZombies == 0)
         {
-            livingZombies = zombies.Length;
+            livingZombies = zombies.Length + 1;
             StartCoroutine(NextWave());
         }
 
@@ -51,9 +51,11 @@ public class ControlDeZombies : MonoBehaviour
         yield return new WaitForSeconds(3f);
         int index = Random.Range(0, timelines.Length);
         director.playableAsset = timelines[index];
-        director.Play();
         foreach (Zombie z in zombies)
             z.gameObject.SetActive(true);
+
+         director.Play();
+        
     }
 
 

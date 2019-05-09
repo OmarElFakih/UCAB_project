@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9239fbe1267cc24db3fdd6bd9674562, type: 3}
   m_Name: Sniper
   m_EditorClassIdentifier: 
-  fireRate: 0
-  bulletPrefab: {fileID: 5878037606933123643, guid: 94ea8504e59a22043a9f00bb15b4749c,
+  clipSize: 3
+  reloadTime: 1.5
+  fireRate: 1
+  bulletPrefab: {fileID: 2315155091684653587, guid: d9c7d96fa1aebd54b9475e6a42d8c7b8,
     type: 3}

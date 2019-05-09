@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Arma : ScriptableObject
 {
+    public int clipSize;
+    public float reloadTime;
     public float fireRate;
 
     public virtual void Disparar(Transform transform)
