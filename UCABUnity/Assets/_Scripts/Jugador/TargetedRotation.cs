@@ -21,14 +21,14 @@ public class TargetedRotation : MonoBehaviour
     {
         Vector3 vectorToTarget = target.position - transform.position;
 
-        float angle = Mathf.Atan2(vectorToTarget.y, vectorToTarget.x) * Mathf.Rad2Deg - AngleOffset();
+        float angle = Mathf.Atan2(vectorToTarget.y, vectorToTarget.x) * Mathf.Rad2Deg - AngularTweeks.AngleOffset(this.forwardSide);
 
         Quaternion q = Quaternion.AngleAxis(angle, Vector3.forward);
 
         transform.rotation = Quaternion.Slerp(transform.rotation, q, Time.deltaTime * rotationSpeed);
     }
 
-    private float AngleOffset()
+  /*  public static float AngleOffset(ForwardSide forwardSide)
     {
         float AngularOffset = 0f;
 
@@ -54,7 +54,7 @@ public class TargetedRotation : MonoBehaviour
 
         return AngularOffset;
     }
-
+    */
 
 
   /*  public enum ForwardSide
@@ -67,10 +67,10 @@ public class TargetedRotation : MonoBehaviour
 }
 
 
-public enum ForwardSide
+/*public enum ForwardSide
 {
     Top,
     Right,
     Buttom,
     Left
-}
+}*/
