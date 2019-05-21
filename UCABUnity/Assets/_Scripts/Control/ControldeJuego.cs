@@ -7,73 +7,76 @@ using UnityEngine.SceneManagement;
 public class ControldeJuego : MonoBehaviour
 {
 
-    public static ControldeJuego instance;
+    public static ControldeJuego CJ;//necesario para convertir esta clase en un singleton
 
-    public static bool GamePaused = false;
+    public static bool gamePaused = false;
 
-    public GameObject ControldeJuegoUI;
+    //datos visibles para otros objetos en escena
+    public Personaje seleccionado; // el jugador tomara este dato cuando comienze el juego
+    [SerializeField] private Personaje[] _opciones = null; // posibles opciones
 
-    private DatosGuardados ControldePuntaje;
 
 
+
+   // public GameObject ControldeJuegoUI; el UI se manejara estrictamente desde el control de Canvas
+
+    [SerializeField]
+    private int _escena;
+
+    private DatosGuardados _controlDePuntaje = new DatosGuardados();
+    //traten de seguir las convenciones de nombramiento de programacion 
+    //como iniciar las variables privadas con un _ y usar mayusculas para diferenciar las diferentes palabras pero no al inicio
+
+
+    //convierte esta clase en un singleton, no tocar
       void Awake()
       {
-
-       // instance = this;
-          if (instance == null)
+          if (CJ == null)
           {
-              instance = this;
-              //DontDestroyOnLoad(this.gameObject);
+              CJ = this;
+              DontDestroyOnLoad(this.gameObject);
           }
           else
           {
-              if (instance != this)
+              if (CJ != this)
                   Destroy(this.gameObject);
           }
       } 
-
+    //no tocar
 
 
     void Start()
     {
-        ControldePuntaje = FindObjectOfType<DatosGuardados>();
-    }
+        //ControldePuntaje = FindObjectOfType<DatosGuardados>(); DatosGuardados no esta en un Gameobject 
+    }                                                           //FindObjectOfType no servira con el
 
-    public void borrarPuntaje()
+    public void borrarPuntaje()//como la prof no menciono nada acerca de borrar puntajes, no creo que haga falta
     {
-        PlayerPrefs.DeleteKey("HighScore");
-        ControldePuntaje.puntajeMaximo = 0;
+        /*PlayerPrefs.DeleteKey("HighScore"); el puntaje se guardara en binario
+        ControldePuntaje.puntajeMaximo = 0;*/
     }
-
-
-
-    // Update is called once per frame
-    void Update()
-    {      
-    }
-
 
 
     public void Pausar ()
     {
-        if (GamePaused)
+        if (gamePaused)
         {
-            ControldeJuegoUI.SetActive(false);
+            //ControldeJuegoUI.SetActive(false); El UI se manejara estrictamente desde control de Canvas
             Time.timeScale = 1f;
-            GamePaused = false;
+            gamePaused = false; //no esta mal, pero puedes chequear el valor de Time.timescale para cumplir la labor de este booleano
         }
         else
         {
-            ControldeJuegoUI.SetActive(true);
+            //ControldeJuegoUI.SetActive(true);
             Time.timeScale = 0f;
-            GamePaused = true;
+            gamePaused = true;
         }
         
     }
 
 
-    [SerializeField]
-    private int escena;
+    /*[SerializeField]  por cuestion de orden es mejor declarar todas las variables al inicio de la clase
+    private int escena;*/
     public void CargarEscena(int escena)
     {
         Time.timeScale = 1f;

@@ -4,7 +4,7 @@ using UnityEngine;
 
 
 [CreateAssetMenu (menuName = "Arma de Projectiles")]
-public class ArmaDeProjectiles : Arma
+public class PersonajeProjectiles : Personaje
 {
 
     public GameObject bulletPrefab;

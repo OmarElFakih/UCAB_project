@@ -2,21 +2,31 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Jugador : MonoBehaviour
+public class Jugador : MonoBehaviour //creado para la primera entrega
 {
-    public Arma arma;
-    private float nextFire = 0;
-    private bool reloading = false;
-    [SerializeField] private int currentBullets = 0;
+    /*
+    deben crear una referencia a una variable tipo Personaje
+    y copiar los datos de esa variable en las referencias correspondientes
+    (el PlayerSprite en el Sprite Renderer por ejemplo)
+    esta referencia se encuentra en la instancia de ControlDeJuego
+    la cual por ser un singleton pueden acceder por medio de
+    ControlDeJuego.CJ.seleccionado
+    */
 
-    [SerializeField] private float maxHealth = 3;
-    [SerializeField] private float currentHealth = 0;
+
+    public Personaje arma;
+    private float _nextFire = 0;
+    private bool _reloading = false;
+    [SerializeField] private int _currentBullets = 0;
+
+    [SerializeField] private float _maxHealth = 3;
+    [SerializeField] private float _currentHealth = 0;
 
     // Start is called before the first frame update
     void Start()
     {
-        currentBullets = arma.clipSize;
-        currentHealth = maxHealth;
+        _currentBullets = arma.clipSize;
+        _currentHealth = _maxHealth;
         
     }
 
@@ -33,9 +43,9 @@ public class Jugador : MonoBehaviour
             if (Input.GetTouch(0).phase == TouchPhase.Ended && CanShoot())
             {
                 arma.Disparar(transform);
-                nextFire = Time.time + arma.fireRate;
-                currentBullets -= 1;
-                if (currentBullets == 0)
+                _nextFire = Time.time + arma.fireRate;
+                _currentBullets -= 1;
+                if (_currentBullets == 0)
                     StartCoroutine(reload());
             }
         }
@@ -48,34 +58,33 @@ public class Jugador : MonoBehaviour
         if (Input.GetMouseButtonUp(0) && CanShoot())
         {
             arma.Disparar(transform);
-            nextFire = Time.time + arma.fireRate;
-            currentBullets -= 1;
-            if (currentBullets == 0)
+            _nextFire = Time.time + arma.fireRate;
+            _currentBullets -= 1;
+            if (_currentBullets == 0)
                 StartCoroutine(reload());
         }
     }
 
     public void Damage(float amount)
     {
-        currentHealth -= amount;
-        if (currentHealth <= 0)
+        _currentHealth -= amount;
+        if (_currentHealth <= 0)
             Debug.Log("PlayerDead");
 
     }
 
 
     private bool CanShoot() {
-        return (!reloading && Time.time > nextFire);
-
+        return (!_reloading && Time.time > _nextFire);
     }
 
 
     private IEnumerator reload()
     {
-        reloading = true;
+        _reloading = true;
         yield return new WaitForSeconds(arma.reloadTime);
-        currentBullets = arma.clipSize;
-        reloading = false;
+        _currentBullets = arma.clipSize;
+        _reloading = false;
     }
 
 }
