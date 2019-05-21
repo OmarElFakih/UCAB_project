@@ -7,7 +7,7 @@ public class PauseMenu : MonoBehaviour
     public static bool GameIsPaused = false;
     public GameObject pauseMenuUI;
     public GameObject pauseButtonUI;
-    private string pauseButton;
+    [SerializeField] private string pauseButton;
 
     void Update(){
         if(Input.GetButtonDown(pauseButton)){
@@ -25,7 +25,7 @@ public class PauseMenu : MonoBehaviour
     public void Resume(){
         pauseMenuUI.SetActive(false);
         pauseButtonUI.SetActive(true);
-        Time.timeScale = 1;
+        Time.timeScale = 1; //-> dejaremos la labor de pausar el tiempo al ControlDeJuego, no esta mal, pero prefiero mantgener cierto orden
         GameIsPaused = false;
     }
 
