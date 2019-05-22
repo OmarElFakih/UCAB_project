@@ -14,20 +14,24 @@ public class Jugador : MonoBehaviour //creado para la primera entrega
     */
 
 
-    public Personaje arma;
+    public Personaje personaje;
     private float _nextFire = 0;
     private bool _reloading = false;
     [SerializeField] private int _currentBullets = 0;
 
     [SerializeField] private float _maxHealth = 3;
     [SerializeField] private float _currentHealth = 0;
+    private TargetedRotation _rotator = null;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        _currentBullets = arma.clipSize;
+        _rotator = GetComponent<TargetedRotation>();
+        _currentBullets = personaje.clipSize;
         _currentHealth = _maxHealth;
-        
+        string childName = transform.Find("Gun").name;
+        Debug.Log(childName);
     }
 
     // Update is called once per frame
@@ -42,8 +46,8 @@ public class Jugador : MonoBehaviour //creado para la primera entrega
         if (Input.touchCount > 0) {
             if (Input.GetTouch(0).phase == TouchPhase.Ended && CanShoot())
             {
-                arma.Disparar(transform);
-                _nextFire = Time.time + arma.fireRate;
+                personaje.Disparar(transform);
+                _nextFire = Time.time + personaje.fireRate;
                 _currentBullets -= 1;
                 if (_currentBullets == 0)
                     StartCoroutine(reload());
@@ -57,8 +61,8 @@ public class Jugador : MonoBehaviour //creado para la primera entrega
     {
         if (Input.GetMouseButtonUp(0) && CanShoot())
         {
-            arma.Disparar(transform);
-            _nextFire = Time.time + arma.fireRate;
+            personaje.Disparar(transform);
+            _nextFire = Time.time + personaje.fireRate;
             _currentBullets -= 1;
             if (_currentBullets == 0)
                 StartCoroutine(reload());
@@ -82,8 +86,8 @@ public class Jugador : MonoBehaviour //creado para la primera entrega
     private IEnumerator reload()
     {
         _reloading = true;
-        yield return new WaitForSeconds(arma.reloadTime);
-        _currentBullets = arma.clipSize;
+        yield return new WaitForSeconds(personaje.reloadTime);
+        _currentBullets = personaje.clipSize;
         _reloading = false;
     }
 

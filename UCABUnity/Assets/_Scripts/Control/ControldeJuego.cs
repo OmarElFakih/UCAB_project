@@ -10,6 +10,7 @@ public class ControldeJuego : MonoBehaviour
     public static ControldeJuego CJ;//necesario para convertir esta clase en un singleton
 
     public static bool gamePaused = false;
+    private ControlDeCanvas Cc = null;
 
     //datos visibles para otros objetos en escena
     public Personaje seleccionado; // el jugador tomara este dato cuando comienze el juego
@@ -74,6 +75,16 @@ public class ControldeJuego : MonoBehaviour
         
     }
 
+    public void AddPoints() {
+        //agregar puntos
+        //Cc.update score
+
+    }
+
+    public void Seleccionar(int opciion)
+    {
+        //seleccionado = opciones[int]
+    }
 
     /*[SerializeField]  por cuestion de orden es mejor declarar todas las variables al inicio de la clase
     private int escena;*/

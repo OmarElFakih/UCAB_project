@@ -9,11 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9239fbe1267cc24db3fdd6bd9674562, type: 3}
-  m_Name: Sniper
-  m_EditorClassIdentifier: 
+  m_Script: {fileID: 0}
+  m_Name: New Personaje Projectiles
+  m_EditorClassIdentifier: Assembly-CSharp::PersonajeProjectiles
+  playerSprite: {fileID: 0}
+  playerForwardSide: 0
+  gunSprite: {fileID: 0}
   clipSize: 3
-  reloadTime: 1.5
-  fireRate: 1
+  reloadTime: 0
+  fireRate: 2
   bulletPrefab: {fileID: 2315155091684653587, guid: d9c7d96fa1aebd54b9475e6a42d8c7b8,
     type: 3}

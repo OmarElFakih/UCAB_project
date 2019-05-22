@@ -212,10 +212,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f49ec33356d8a643a0a623c61099eeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arma: {fileID: 11400000, guid: e8f6b67e3ed9ca744a3b34cb4cb11769, type: 2}
-  currentBullets: 0
-  maxHealth: 3
-  currentHealth: 3
+  personaje: {fileID: 11400000, guid: 54ec8cfb838795a43abdfab1ec0eeab6, type: 2}
+  _currentBullets: 0
+  _maxHealth: 3
+  _currentHealth: 0
 --- !u!114 &1342591510801902755
 MonoBehaviour:
   m_ObjectHideFlags: 0

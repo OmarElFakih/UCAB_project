@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-[CreateAssetMenu (menuName = "Arma de Projectiles")]
+[CreateAssetMenu (menuName = "PersonajeDeProjectiles")]
 public class PersonajeProjectiles : Personaje
 {
 
