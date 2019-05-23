@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BreakOutBall : MonoBehaviour
 {
+    [SerializeField] private GunData _gData;
     private Vector3 _orgPosition = Vector3.zero;
     private Rigidbody2D rb;
 
@@ -36,7 +37,24 @@ public class BreakOutBall : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
+
+        ShootingTarget _sT = other.collider.GetComponent<ShootingTarget>();
+        if (_sT != null)
+        {
+            _sT.GetShot(_gData);
+        }
+
         _orgPosition = other.contacts[0].point;
+
+        if (_gData.bounces == 0)
+        {
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            _gData.bounces--;
+        }
+
         SetVelocity();
         
     }
@@ -48,4 +66,12 @@ public class BreakOutBall : MonoBehaviour
         rb.velocity = velocity;
 
     }
+
+    public void SetGunData(GunData data)
+    {
+        this._gData = data;
+    }
+
+
+
 }

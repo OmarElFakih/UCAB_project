@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: New Personaje Projectiles
   m_EditorClassIdentifier: Assembly-CSharp::PersonajeProjectiles
+  gunData:
+    damage: 0
+    bounces: 0
   playerSprite: {fileID: 0}
   playerForwardSide: 0
   gunSprite: {fileID: 0}

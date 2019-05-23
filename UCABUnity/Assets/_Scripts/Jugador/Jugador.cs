@@ -31,7 +31,7 @@ public class Jugador : MonoBehaviour //creado para la primera entrega
         _currentBullets = personaje.clipSize;
         _currentHealth = _maxHealth;
         string childName = transform.Find("Gun").name;
-        Debug.Log(childName);
+       // Debug.Log(childName);
     }
 
     // Update is called once per frame

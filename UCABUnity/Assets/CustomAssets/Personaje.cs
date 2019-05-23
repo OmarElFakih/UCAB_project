@@ -4,6 +4,8 @@ using UnityEngine;
 
 public abstract class Personaje : ScriptableObject
 {
+    public GunData gunData;
+
     public Sprite playerSprite;
     public ForwardSide playerForwardSide;
 
@@ -16,3 +18,4 @@ public abstract class Personaje : ScriptableObject
   
 
 }
+

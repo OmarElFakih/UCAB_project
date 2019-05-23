@@ -13,10 +13,10 @@ public class SeccionDeZombie : ShootingTarget
         parent = GetComponentInParent<Zombie>();
     }
 
-    public override void GetShot(bullet bullet)
+    public override void GetShot(GunData data)
     {
-        parent.Damage(bullet.damage * dmMultiplier);
-        Destroy(bullet.gameObject);
+        parent.Damage(data.damage * dmMultiplier);
+       // Destroy(bullet.gameObject);
     }
 
     private void OnTriggerEnter2D(Collider2D other)

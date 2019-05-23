@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ShootingTarget : MonoBehaviour
 {
-    public virtual void GetShot(bullet bullet)
+    public virtual void GetShot(GunData gData)
     {
         Debug.Log("Bullet Hit");
     }

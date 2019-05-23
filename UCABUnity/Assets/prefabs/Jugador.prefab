@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1342591510325125289}
   - component: {fileID: 1342591510325125286}
   m_Layer: 0
-  m_Name: 2h_sniper
+  m_Name: Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -212,7 +212,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f49ec33356d8a643a0a623c61099eeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  personaje: {fileID: 11400000, guid: 54ec8cfb838795a43abdfab1ec0eeab6, type: 2}
+  personaje: {fileID: 0}
   _currentBullets: 0
   _maxHealth: 3
   _currentHealth: 0

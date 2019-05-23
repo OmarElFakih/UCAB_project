@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-[CreateAssetMenu (menuName = "PersonajeDeProjectiles")]
+[CreateAssetMenu (menuName = "Personaje De Projectiles")]
 public class PersonajeProjectiles : Personaje
 {
 
@@ -14,6 +14,10 @@ public class PersonajeProjectiles : Personaje
         Vector3 bulletRotation = transform.eulerAngles;
         bulletRotation.z -= 90;
 
-        Instantiate(bulletPrefab, transform.position, Quaternion.Euler(bulletRotation));
+        BreakOutBall ball = Instantiate(bulletPrefab, transform.position, Quaternion.Euler(bulletRotation)).GetComponent<BreakOutBall>();
+        if (ball != null)
+        {
+            ball.SetGunData(this.gunData);
+        }
     }
 }
