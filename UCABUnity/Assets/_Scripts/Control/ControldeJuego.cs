@@ -67,7 +67,11 @@ public class ControldeJuego : MonoBehaviour
 
 
     //// Control de Pausa
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> 6fc89c4f867f1e84ae1f594d74f39528cc62d191
     public void pausa ()
     {
         if (Time.timeScale == 1f) 
