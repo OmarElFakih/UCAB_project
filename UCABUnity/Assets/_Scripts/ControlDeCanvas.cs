@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class ControlDeCanvas : MonoBehaviour
 {//traten de apegarse a los nombres que les di en el diagrama de clases
@@ -34,5 +36,10 @@ public class ControlDeCanvas : MonoBehaviour
         pauseButtonUI.SetActive(false);
         Time.timeScale = 0;
         GameIsPaused = true;
+    }
+
+    public void Menu()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 }
