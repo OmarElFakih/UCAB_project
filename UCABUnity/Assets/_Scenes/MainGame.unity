@@ -1176,6 +1176,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ControlDeZombies
       objectReference: {fileID: 0}
+    - target: {fileID: 1554839267262496783, guid: 9bd187898766fa3498f33f1c49433250,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1554839267262496771, guid: 9bd187898766fa3498f33f1c49433250,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1242,7 +1247,8 @@ PrefabInstance:
       propertyPath: m_WrapMode
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1554839267262496782, guid: 9bd187898766fa3498f33f1c49433250, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 9bd187898766fa3498f33f1c49433250, type: 3}
 --- !u!1 &1680872537
 GameObject:
@@ -1603,5 +1609,11 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1112777159}
+    - target: {fileID: 1342591510801902782, guid: 0f17ab12d2fa6294f8b4b07ef03ce205,
+        type: 3}
+      propertyPath: personaje
+      value: 
+      objectReference: {fileID: 11400000, guid: c902250ccb51c634f8f914d89c6a2bc4,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f17ab12d2fa6294f8b4b07ef03ce205, type: 3}

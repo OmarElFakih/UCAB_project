@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 0}
-  m_Name: New Personaje Projectiles
+  m_Name: prejectil
   m_EditorClassIdentifier: Assembly-CSharp::PersonajeProjectiles
   gunData:
-    damage: 0
-    bounces: 0
+    damage: 1
+    bounces: 1
   playerSprite: {fileID: 0}
-  playerForwardSide: 0
+  playerForwardSide: 1
   gunSprite: {fileID: 0}
-  clipSize: 3
+  clipSize: 5
   reloadTime: 0
-  fireRate: 2
+  fireRate: 0.5
   bulletPrefab: {fileID: 2315155091684653587, guid: d9c7d96fa1aebd54b9475e6a42d8c7b8,
     type: 3}

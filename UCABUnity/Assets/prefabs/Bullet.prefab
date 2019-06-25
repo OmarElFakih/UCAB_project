@@ -131,5 +131,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a0b70a074c6634428d77ed93e7c391d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
+  _gData:
+    damage: 1
+    bounces: 1
+  speed: 8
   forwardSide: 0

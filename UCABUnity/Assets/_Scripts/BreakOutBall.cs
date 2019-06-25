@@ -21,6 +21,8 @@ public class BreakOutBall : MonoBehaviour
         SetVelocity();
 
         _orgPosition = transform.position;
+
+        Destroy(this.gameObject, 2f);
     }
 
 
