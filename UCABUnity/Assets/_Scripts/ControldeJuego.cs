@@ -11,10 +11,11 @@ public class ControldeJuego : MonoBehaviour
 
     public static bool GamePaused = false;
 
-    public GameObject ControldeJuegoUI;
+    public GameObject PanelMenúPausa;
 
     private DatosGuardados ControldePuntaje;
 
+  
 
       void Awake()
       {
@@ -58,13 +59,14 @@ public class ControldeJuego : MonoBehaviour
     {
         if (GamePaused)
         {
-            ControldeJuegoUI.SetActive(false);
+            PanelMenúPausa.SetActive(false);
             Time.timeScale = 1f;
             GamePaused = false;
+           
         }
         else
         {
-            ControldeJuegoUI.SetActive(true);
+            PanelMenúPausa.SetActive(true);
             Time.timeScale = 0f;
             GamePaused = true;
         }
@@ -79,6 +81,8 @@ public class ControldeJuego : MonoBehaviour
         Time.timeScale = 1f;
         SceneManager.LoadScene(escena);
     }
+
+
 
 
 
