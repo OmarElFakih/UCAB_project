@@ -11,6 +11,7 @@ public class Zombie : MonoBehaviour
 
     public void Damage(float amount)
     {
+
         currentHealth -= amount;
         if (currentHealth <= 0)
         {
@@ -20,5 +21,5 @@ public class Zombie : MonoBehaviour
         }
     }
 
-    
+
 }

@@ -11,16 +11,18 @@ public class ControlDeZombies : MonoBehaviour
 
     [SerializeField] private Zombie[] zombies = null;
     [SerializeField] private TimelineAsset[] timelines = null;
+    public int Score = 0;
     private PlayableDirector director = null;
 
     private int livingZombies = 0;
 
     private void Awake()
     {
-        if (CZ == null) {
+        if (CZ == null)
+        {
             CZ = this;
         }
-        else if(CZ != null && CZ != this)
+        else if (CZ != null && CZ != this)
         {
             Destroy(this.gameObject);
         }
@@ -40,6 +42,7 @@ public class ControlDeZombies : MonoBehaviour
         livingZombies -= 1;
         if (livingZombies == 0)
         {
+            Score += 50;
             livingZombies = zombies.Length + 1;
             StartCoroutine(NextWave());
         }
@@ -47,15 +50,16 @@ public class ControlDeZombies : MonoBehaviour
     }
 
 
-    private IEnumerator NextWave() {
+    private IEnumerator NextWave()
+    {
         yield return new WaitForSeconds(3f);
         int index = Random.Range(0, timelines.Length);
         director.playableAsset = timelines[index];
         foreach (Zombie z in zombies)
             z.gameObject.SetActive(true);
 
-         director.Play();
-        
+        director.Play();
+
     }
 
 
