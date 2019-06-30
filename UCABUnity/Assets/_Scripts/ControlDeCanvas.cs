@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 
 public class ControlDeCanvas : MonoBehaviour
@@ -12,7 +11,7 @@ public class ControlDeCanvas : MonoBehaviour
     [SerializeField] private string pauseButton;
 
     void Update(){
-        if(Input.GetButtonDown(pauseButton)){
+        if (Input.GetButtonDown(pauseButton)){
             if (GameIsPaused){
                 Resume();
             }
@@ -38,8 +37,4 @@ public class ControlDeCanvas : MonoBehaviour
         GameIsPaused = true;
     }
 
-    public void Menu()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
-    }
 }
