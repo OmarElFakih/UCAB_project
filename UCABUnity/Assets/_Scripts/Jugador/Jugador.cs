@@ -9,8 +9,17 @@ public class Jugador : MonoBehaviour
     private bool reloading = false;
     [SerializeField] private int currentBullets = 0;
 
-    [SerializeField] private float maxHealth = 3;
+    [SerializeField] private float maxHealth = 4;
     [SerializeField] private float currentHealth = 0;
+    public GameObject recarga;
+    public GameObject tresbalas;
+    public GameObject dosbalas;
+    public GameObject unabala;
+    public GameObject mensajeMuerte;
+    public GameObject vida1;
+    public GameObject vida2;
+    public GameObject vida3;
+
 
     // Start is called before the first frame update
     void Start()
@@ -35,8 +44,31 @@ public class Jugador : MonoBehaviour
                 arma.Disparar(transform);
                 nextFire = Time.time + arma.fireRate;
                 currentBullets -= 1;
+
+                if (currentBullets == 1)
+                {
+                    unabala.SetActive(true);
+                    tresbalas.SetActive(false);
+                    dosbalas.SetActive(false);
+                }
+
+                if (currentBullets == 2)
+                {
+                    dosbalas.SetActive(true);
+                    tresbalas.SetActive(false);
+                    unabala.SetActive(false);
+                }
+
+
                 if (currentBullets == 0)
+                {
+                    //recarga.SetActive(true);
+                    tresbalas.SetActive(true);
+                    dosbalas.SetActive(false);
+                    unabala.SetActive(false);
                     StartCoroutine(reload());
+                }
+
             }
         }
 
@@ -50,16 +82,62 @@ public class Jugador : MonoBehaviour
             arma.Disparar(transform);
             nextFire = Time.time + arma.fireRate;
             currentBullets -= 1;
+
+            if (currentBullets == 1)
+            {
+                unabala.SetActive(true);
+                tresbalas.SetActive(false);
+                dosbalas.SetActive(false);
+            }
+
+            if (currentBullets == 2)
+            {
+                dosbalas.SetActive(true);
+                tresbalas.SetActive(false);
+                unabala.SetActive(false);
+            }
+
+
             if (currentBullets == 0)
+            {
+                //recarga.SetActive(true);
+                tresbalas.SetActive(true);
+                dosbalas.SetActive(false);
+                unabala.SetActive(false);
                 StartCoroutine(reload());
+            }
+
+ 
         }
     }
 
     public void Damage(float amount)
     {
-        currentHealth -= amount;
+        amount = 1;
+        currentHealth -= 1;
+
+        if (currentHealth < 4)
+        {
+            vida3.SetActive(false);
+        }
+
+        if (currentHealth < 2)
+        {
+            vida2.SetActive(false);
+        }
+
+        if (currentHealth < 1)
+        {
+            vida1.SetActive(false);
+        }
+
+
         if (currentHealth <= 0)
+        {
             Debug.Log("PlayerDead");
+            mensajeMuerte.SetActive(true);
+            Time.timeScale = 0;
+        }
 
     }
 
@@ -73,9 +151,11 @@ public class Jugador : MonoBehaviour
     private IEnumerator reload()
     {
         reloading = true;
+        recarga.SetActive(reloading);
         yield return new WaitForSeconds(arma.reloadTime);
         currentBullets = arma.clipSize;
         reloading = false;
+        recarga.SetActive(reloading);
     }
 
 }

@@ -5,6 +5,8 @@ using UnityEngine;
 public class ZombieControl : MonoBehaviour
 {
     public static ZombieControl ZC = null;
+    /*public Jugador player;
+    public float amount = 0;*/
 
     [SerializeField]
     private PolygonCollider2D[] colliders;
@@ -64,12 +66,13 @@ public class ZombieControl : MonoBehaviour
 
     // En Caso de Impactar
 
-  /*  void OnTriggerEnter2D(Collider2D col)
+    void OnTriggerEnter2D(Collider2D col)
     {
         switch (col.gameObject.tag) {
             case "Jugador":
                 SpawnControl.spawnAllowed = false;
                 Destroy(col.gameObject);
+                //player.Damage(amount);
                 break;
 
             case "bullet":           
@@ -78,7 +81,7 @@ public class ZombieControl : MonoBehaviour
                 break;
         }
     }
-    */
+    
 
 
     public void SetColliderForSprite(int spriteNum)
