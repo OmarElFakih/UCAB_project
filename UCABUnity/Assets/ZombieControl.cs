@@ -13,6 +13,7 @@ public class ZombieControl : MonoBehaviour
     private int currentColliderIndex = 0;
 
 
+
     private Vector3 moveDirection;
     public float moveSpeed;
     public float turnSpeed;
@@ -26,7 +27,7 @@ public class ZombieControl : MonoBehaviour
         // Designa target como Jugador
         target = GameObject.Find("Jugador");
         rb = GetComponent<Rigidbody2D>();
-        moveSpeed = Random.Range(0.5f, 1f);  // Da un rango para la velocidad del movimiento de los zombies
+        moveSpeed = Random.Range(0.5f, 1f);  // Da un rango para la velocidad del movimiento de los zombie
 
     }
 
