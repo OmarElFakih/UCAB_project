@@ -11,14 +11,13 @@ public class Jugador : MonoBehaviour
 
     [SerializeField] private float maxHealth = 4;
     [SerializeField] private float currentHealth = 0;
-    public GameObject recarga;
+
+    public GameObject recargar;
     public GameObject tresbalas;
     public GameObject dosbalas;
     public GameObject unabala;
-    public GameObject mensajeMuerte;
-    public GameObject vida1;
-    public GameObject vida2;
-    public GameObject vida3;
+    public GameObject cerobalas;
+
 
 
     // Start is called before the first frame update
@@ -62,7 +61,7 @@ public class Jugador : MonoBehaviour
 
                 if (currentBullets == 0)
                 {
-                    //recarga.SetActive(true);
+                    //recargar.SetActive(true);
                     tresbalas.SetActive(true);
                     dosbalas.SetActive(false);
                     unabala.SetActive(false);
@@ -110,10 +109,10 @@ public class Jugador : MonoBehaviour
  
         }
     }
-
+    
     public void Damage(float amount)
     {
-        amount = 1;
+        /*amount = 1;
         currentHealth -= 1;
 
         if (currentHealth < 4)
@@ -137,7 +136,7 @@ public class Jugador : MonoBehaviour
             Debug.Log("PlayerDead");
             mensajeMuerte.SetActive(true);
             Time.timeScale = 0;
-        }
+        }*/
 
     }
 
@@ -151,11 +150,11 @@ public class Jugador : MonoBehaviour
     private IEnumerator reload()
     {
         reloading = true;
-        recarga.SetActive(reloading);
+        recargar.SetActive(reloading);
         yield return new WaitForSeconds(arma.reloadTime);
         currentBullets = arma.clipSize;
         reloading = false;
-        recarga.SetActive(reloading);
+        recargar.SetActive(reloading);
     }
 
 }
