@@ -9,8 +9,8 @@ public class Controlador : MonoBehaviour
     {
         print("Cambiando a la escena " + nombre);
         SceneManager.LoadScene(nombre);
- 
-        /*if()){
+
+        /*if()){}
             Time.timeScale = 1f;
         }*/
     }
