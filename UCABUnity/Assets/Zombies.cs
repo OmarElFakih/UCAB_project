@@ -39,9 +39,9 @@ public class Zombies : MonoBehaviour
         {
             case "Jugador":
                 SpawnControl.spawnAllowed = false;
-                vida.SetActive(false);   //Aquí deveria desactivar el sprite del corazon pero no hace nada
+                //vida.SetActive(false);   //Aquí deveria desactivar el sprite del corazon pero no hace nada
                 Destroy(col.gameObject);
-                muerte.SetActive(true); //Aqui deveria mostrar el mensaje de muerte después de destruir al jugador
+                //muerte.SetActive(true); //Aqui deveria mostrar el mensaje de muerte después de destruir al jugador
                 break;                  //pero no hace nada, deja todo igual
 
             case "Bullet":
