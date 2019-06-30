@@ -64,23 +64,6 @@ public class ZombieControl : MonoBehaviour
 
 
 
-    // En Caso de Impactar
-
-    void OnTriggerEnter2D(Collider2D col)
-    {
-        switch (col.gameObject.tag) {
-            case "Jugador":
-                SpawnControl.spawnAllowed = false;
-                Destroy(col.gameObject);
-                //player.Damage(amount);
-                break;
-
-            case "bullet":           
-                Destroy(col.gameObject);
-                Destroy(gameObject);
-                break;
-        }
-    }
     
 
 

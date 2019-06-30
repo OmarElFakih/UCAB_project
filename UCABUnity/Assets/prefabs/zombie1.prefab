@@ -483,3 +483,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blood: {fileID: 846601200128314034, guid: 61c68bb8741a5f148bb62011a3e87140, type: 3}
+  muerte: {fileID: 6219321434794280458, guid: 0c50b02eb7bc4c94b9cfd00de99a10ae, type: 3}
+  vida: {fileID: 5716724767110084344, guid: 552a2c8577eac234986fe605236087c5, type: 3}
+  MaxHealth: 1
+  currentHealth: 1
+  damage: 1

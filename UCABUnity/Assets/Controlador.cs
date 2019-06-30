@@ -8,6 +8,7 @@ public class Controlador : MonoBehaviour
     public void CambiarEscena(string nombre)
     {
         print("Cambiando a la escena " + nombre);
+        Time.timeScale = 1f;
         SceneManager.LoadScene(nombre);
     }
 
