@@ -11,13 +11,18 @@ public class Jugador : MonoBehaviour
 
     [SerializeField] private float maxHealth = 3;
     [SerializeField] private float currentHealth = 0;
+    public GameObject recarga;
+    public GameObject tresbalas;
+    public GameObject dosbalas;
+    public GameObject unabala;
 
     // Start is called before the first frame update
     void Start()
     {
         currentBullets = arma.clipSize;
         currentHealth = maxHealth;
-        
+
+
     }
 
     // Update is called once per frame
@@ -30,13 +35,14 @@ public class Jugador : MonoBehaviour
 
     void MobileShoot() {
         if (Input.touchCount > 0) {
-            if (Input.GetTouch(0).phase == TouchPhase.Ended && CanShoot())
-            {
+            if (Input.GetTouch(0).phase == TouchPhase.Ended && CanShoot()){
                 arma.Disparar(transform);
                 nextFire = Time.time + arma.fireRate;
                 currentBullets -= 1;
-                if (currentBullets == 0)
+                if (currentBullets == 0){
+                    //recarga.SetActive(true);
                     StartCoroutine(reload());
+                }  
             }
         }
 
@@ -50,8 +56,28 @@ public class Jugador : MonoBehaviour
             arma.Disparar(transform);
             nextFire = Time.time + arma.fireRate;
             currentBullets -= 1;
+
+            if (currentBullets == 1)
+            {
+                unabala.SetActive(true);
+                tresbalas.SetActive(false);
+                dosbalas.SetActive(false);
+            }
+
+            if (currentBullets == 2)
+            {
+                dosbalas.SetActive(true);
+                tresbalas.SetActive(false);
+                unabala.SetActive(false);
+            }
+
             if (currentBullets == 0)
+            {
+                tresbalas.SetActive(true);
+                dosbalas.SetActive(false);
+                unabala.SetActive(false);
                 StartCoroutine(reload());
+            }
         }
     }
 
@@ -73,9 +99,11 @@ public class Jugador : MonoBehaviour
     private IEnumerator reload()
     {
         reloading = true;
+        recarga.SetActive(true);
         yield return new WaitForSeconds(arma.reloadTime);
         currentBullets = arma.clipSize;
         reloading = false;
+        recarga.SetActive(false);
     }
 
 }
