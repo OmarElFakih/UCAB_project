@@ -150,9 +150,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.06596186, y: 0}
   serializedVersion: 2
-  m_Radius: 0.4
+  m_Radius: 0.2063701
 --- !u!212 &1342591510801902752
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -217,6 +217,14 @@ MonoBehaviour:
   currentBullets: 0
   maxHealth: 3
   currentHealth: 3
+  recarga: {fileID: 0}
+  tresbalas: {fileID: 0}
+  dosbalas: {fileID: 0}
+  unabala: {fileID: 0}
+  mensajeMuerte: {fileID: 0}
+  vida1: {fileID: 0}
+  vida2: {fileID: 0}
+  vida3: {fileID: 0}
 --- !u!114 &1342591510801902755
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -266,9 +274,9 @@ PolygonCollider2D:
       - {x: 0.17, y: -0.089999996}
       - {x: 0.26, y: -0.12}
       - {x: 0.26999998, y: -0.06}
-      - {x: 0.26999998, y: 0.22999999}
-      - {x: -0.06, y: 0.22999999}
-      - {x: -0.13, y: 0.13}
+      - {x: 0.19339912, y: 0.2257445}
+      - {x: -0.038722012, y: 0.16616584}
+      - {x: -0.04063228, y: 0.1257444}
       - {x: -0.14, y: 0.06}
       - {x: -0.14, y: -0.14999999}
       - {x: -0.049999997, y: -0.21}

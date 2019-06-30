@@ -16,15 +16,17 @@ public class ControldeJuego : MonoBehaviour
   
     private DatosGuardados ControldePuntaje;
 
+  
     // Inform
     public Text waveLabel;
     public GameObject[] nextWaveLabels;
 
     public bool gameOver = false;
-
+    
     private int wave = 1;
     public int Wave
     {
+       
         get { return wave; }
         set
         {
@@ -35,6 +37,7 @@ public class ControldeJuego : MonoBehaviour
                 {
                     nextWaveLabels[i].GetComponent<Animator>().SetTrigger("nextWave");
                     nextWaveLabels[i].GetComponent<Animator>().SetTrigger("nextWavet");
+
                 }
             }
             waveLabel.text = "WAVE: " + (wave + 1);

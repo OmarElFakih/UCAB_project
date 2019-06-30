@@ -20,7 +20,7 @@ GameObject:
   - component: {fileID: 97445908102327610}
   m_Layer: 0
   m_Name: zombie1
-  m_TagString: enemy
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -485,6 +485,6 @@ MonoBehaviour:
   blood: {fileID: 846601200128314034, guid: 61c68bb8741a5f148bb62011a3e87140, type: 3}
   muerte: {fileID: 3740016239028454819, guid: 0c50b02eb7bc4c94b9cfd00de99a10ae, type: 3}
   vida: {fileID: 6354098849296959185, guid: 552a2c8577eac234986fe605236087c5, type: 3}
-  MaxHealth: 1
-  currentHealth: 1
+  MaxHealth: 2
+  currentHealth: 2
   damage: 1

@@ -52,13 +52,21 @@ public class Zombies : MonoBehaviour
                 muerte.SetActive(true); //Aqui deveria mostrar el mensaje de muerte después de destruir al jugador
                 break;                  //pero no hace nada, deja todo igual
 
+
             case "Bullet":
-                Instantiate(blood, transform.position, Quaternion.identity); //Aqui muestra perfectamente la animacion de la sangre
-                Destroy(col.gameObject);
-                Destroy(gameObject);
+               
+			   Destroy(col.gameObject);
+               // if (currentHealth == 0)
+			//	{
+		        Instantiate(blood, transform.position, Quaternion.identity); //Aqui muestra perfectamente la animacion de la sangre
+				Destroy(gameObject);
                 DatosGuardados.puntajeactual += 10;
-                break;
-        }
+		//	}else {
+			//		(currentHealth =currentHealth- 1);
+	//	}
+	//}
+			   break;
+	}
     }
 
     public void Damage(float amount)
