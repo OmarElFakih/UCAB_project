@@ -61,3 +61,6 @@ TagManager:
   - name: vidas
     uniqueID: 2750483945
     locked: 0
+  - name: SpawnControl
+    uniqueID: 2299859875
+    locked: 0
