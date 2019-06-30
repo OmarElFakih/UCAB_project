@@ -5,7 +5,7 @@ using UnityEngine;
 public class Zombie : MonoBehaviour
 {
     [SerializeField] private float MaxHealth = 1;
-    [SerializeField] private float currentHealth = 0;
+    [SerializeField] private float currentHealth = 0; 
     public float damage;
 
 
