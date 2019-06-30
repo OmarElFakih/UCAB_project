@@ -8,6 +8,7 @@ TagManager:
   - Bullet
   - Jugador
   - wavelabel
+  - text
   layers:
   - Default
   - TransparentFX
