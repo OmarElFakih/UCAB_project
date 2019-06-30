@@ -6,6 +6,8 @@ TagManager:
   tags:
   - enemy
   - Bullet
+  - Jugador
+  - wavelabel
   layers:
   - Default
   - TransparentFX
@@ -54,4 +56,7 @@ TagManager:
     locked: 0
   - name: arma
     uniqueID: 2098725707
+    locked: 0
+  - name: vidas
+    uniqueID: 2750483945
     locked: 0

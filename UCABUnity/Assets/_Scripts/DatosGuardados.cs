@@ -11,16 +11,17 @@ public class DatosGuardados : MonoBehaviour
     public Text Score;
     public Text HighScore;
     //
-        public float puntajeactual;
-        public float puntajeMaximo;
+        public static int puntajeactual = 0;
+        public  int puntajeMaximo;
     //
-    public float puntos ;
+    //public float puntos ;
 
-    public bool scoreInc;
+   // public bool scoreInc;
 
     void Start()
     {
-        puntajeMaximo = PlayerPrefs.GetFloat("HighScore", 0f);
+        Score = GetComponent<Text>();
+       // puntajeMaximo = PlayerPrefs.GetFloat("HighScore", 0f);
       /*{
             puntajeMaximo = PlayerPrefs.GetFloat("HighScore");
         }*/
@@ -28,39 +29,29 @@ public class DatosGuardados : MonoBehaviour
 
     void Update()
     {
-        if (scoreInc == true)
+        /*if (scoreInc == true)
         {
             //puntajeactual += puntos * Time.deltaTime;
-            addPuntos();
-        }
+          // addPuntos();
+        }*/
+
+        Score.text = "" + Mathf.Round(puntajeactual);
+        HighScore.text = "HighScore: " + Mathf.Round(puntajeMaximo);
 
         if (puntajeactual > puntajeMaximo)
         {
             puntajeMaximo = puntajeactual;
-            PlayerPrefs.SetFloat("HighScore", puntajeMaximo);
+          //  PlayerPrefs.SetFloat("HighScore", puntajeMaximo);
         }
 
-        Score.text = "Score: " + Mathf.Round (puntajeactual);
-        HighScore.text = "HighScore: " + Mathf.Round (puntajeMaximo);
+        
 
     }
+
 
    
+        
+    
 
-    public void addPuntos ()
-    {
-        if (Input.GetMouseButtonDown(0))
-        {
-            puntajeactual = puntajeactual + 5  ;
-        }
-    }
-
-    public void onTrigger (Collider2D objecto)
-    {
-        if (objecto.gameObject.name == "target")
-        {
-            puntajeactual = puntajeactual + 5;
-        }
-    }
 
 }

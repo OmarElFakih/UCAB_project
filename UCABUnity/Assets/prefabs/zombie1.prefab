@@ -483,3 +483,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blood: {fileID: 846601200128314034, guid: 61c68bb8741a5f148bb62011a3e87140, type: 3}
+  MaxHealth: 1
+  currentHealth: 1
+  damage: 1
+  player: {fileID: 1342591510801902782, guid: 0f17ab12d2fa6294f8b4b07ef03ce205, type: 3}
+  amount: 1
