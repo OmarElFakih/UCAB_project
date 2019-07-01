@@ -2799,7 +2799,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1167082297
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4150,56 +4150,6 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Jugador
       objectReference: {fileID: 0}
-    - target: {fileID: 1342591510801902782, guid: 0f17ab12d2fa6294f8b4b07ef03ce205,
-        type: 3}
-      propertyPath: recarga
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1342591510801902782, guid: 0f17ab12d2fa6294f8b4b07ef03ce205,
-        type: 3}
-      propertyPath: tresbalas
-      value: 
-      objectReference: {fileID: 789476717}
-    - target: {fileID: 1342591510801902782, guid: 0f17ab12d2fa6294f8b4b07ef03ce205,
-        type: 3}
-      propertyPath: dosbalas
-      value: 
-      objectReference: {fileID: 1180771660}
-    - target: {fileID: 1342591510801902782, guid: 0f17ab12d2fa6294f8b4b07ef03ce205,
-        type: 3}
-      propertyPath: unabala
-      value: 
-      objectReference: {fileID: 770505115}
-    - target: {fileID: 1342591510801902782, guid: 0f17ab12d2fa6294f8b4b07ef03ce205,
-        type: 3}
-      propertyPath: mensajeMuerte
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1342591510801902782, guid: 0f17ab12d2fa6294f8b4b07ef03ce205,
-        type: 3}
-      propertyPath: vida1
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1342591510801902782, guid: 0f17ab12d2fa6294f8b4b07ef03ce205,
-        type: 3}
-      propertyPath: vida2
-      value: 
-      objectReference: {fileID: 2103545029}
-    - target: {fileID: 1342591510801902782, guid: 0f17ab12d2fa6294f8b4b07ef03ce205,
-        type: 3}
-      propertyPath: vida3
-      value: 
-      objectReference: {fileID: 91789357}
-    - target: {fileID: 1342591510801902782, guid: 0f17ab12d2fa6294f8b4b07ef03ce205,
-        type: 3}
-      propertyPath: currentHealth
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1342591510801902782, guid: 0f17ab12d2fa6294f8b4b07ef03ce205,
-        type: 3}
-      propertyPath: recargar
-      value: 
-      objectReference: {fileID: 189340404}
     - target: {fileID: 1342591510801902753, guid: 0f17ab12d2fa6294f8b4b07ef03ce205,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4255,6 +4205,61 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 1342591510801902755, guid: 0f17ab12d2fa6294f8b4b07ef03ce205,
+        type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 1112777159}
+    - target: {fileID: 1342591510801902782, guid: 0f17ab12d2fa6294f8b4b07ef03ce205,
+        type: 3}
+      propertyPath: recarga
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1342591510801902782, guid: 0f17ab12d2fa6294f8b4b07ef03ce205,
+        type: 3}
+      propertyPath: tresbalas
+      value: 
+      objectReference: {fileID: 789476717}
+    - target: {fileID: 1342591510801902782, guid: 0f17ab12d2fa6294f8b4b07ef03ce205,
+        type: 3}
+      propertyPath: dosbalas
+      value: 
+      objectReference: {fileID: 1180771660}
+    - target: {fileID: 1342591510801902782, guid: 0f17ab12d2fa6294f8b4b07ef03ce205,
+        type: 3}
+      propertyPath: unabala
+      value: 
+      objectReference: {fileID: 770505115}
+    - target: {fileID: 1342591510801902782, guid: 0f17ab12d2fa6294f8b4b07ef03ce205,
+        type: 3}
+      propertyPath: mensajeMuerte
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1342591510801902782, guid: 0f17ab12d2fa6294f8b4b07ef03ce205,
+        type: 3}
+      propertyPath: vida1
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1342591510801902782, guid: 0f17ab12d2fa6294f8b4b07ef03ce205,
+        type: 3}
+      propertyPath: vida2
+      value: 
+      objectReference: {fileID: 2103545029}
+    - target: {fileID: 1342591510801902782, guid: 0f17ab12d2fa6294f8b4b07ef03ce205,
+        type: 3}
+      propertyPath: vida3
+      value: 
+      objectReference: {fileID: 91789357}
+    - target: {fileID: 1342591510801902782, guid: 0f17ab12d2fa6294f8b4b07ef03ce205,
+        type: 3}
+      propertyPath: currentHealth
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1342591510801902782, guid: 0f17ab12d2fa6294f8b4b07ef03ce205,
+        type: 3}
+      propertyPath: recargar
+      value: 
+      objectReference: {fileID: 189340404}
     - target: {fileID: 1342591510801902752, guid: 0f17ab12d2fa6294f8b4b07ef03ce205,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -4265,10 +4270,5 @@ PrefabInstance:
       propertyPath: m_SortingLayer
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1342591510801902755, guid: 0f17ab12d2fa6294f8b4b07ef03ce205,
-        type: 3}
-      propertyPath: target
-      value: 
-      objectReference: {fileID: 1112777159}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f17ab12d2fa6294f8b4b07ef03ce205, type: 3}
