@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - enemy
+  - Bullet
+  - Jugador
+  - wavelabel
+  - text
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -40,4 +46,22 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: jugador
+    uniqueID: 2855306237
+    locked: 0
+  - name: zombie
+    uniqueID: 1555419343
+    locked: 0
+  - name: balas
+    uniqueID: 3189747195
+    locked: 0
+  - name: arma
+    uniqueID: 2098725707
+    locked: 0
+  - name: vidas
+    uniqueID: 2750483945
+    locked: 0
+  - name: SpawnControl
+    uniqueID: 2299859875
     locked: 0

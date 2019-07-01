@@ -11,7 +11,6 @@ public class ControlDeZombies : MonoBehaviour
 
     [SerializeField] private Zombie[] zombies = null;
     [SerializeField] private TimelineAsset[] timelines = null;
-    public int Score = 0;
     private PlayableDirector director = null;
 
     private int livingZombies = 0;
@@ -41,7 +40,6 @@ public class ControlDeZombies : MonoBehaviour
         livingZombies -= 1;
         if (livingZombies == 0)
         {
-            Score += 50;
             livingZombies = zombies.Length + 1;
             StartCoroutine(NextWave());
         }

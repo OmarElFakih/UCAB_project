@@ -65,8 +65,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 2098725707
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 93deaf88c55be4641af692051b87f6d9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -93,6 +93,7 @@ GameObject:
   - component: {fileID: 1342591510801902752}
   - component: {fileID: 1342591510801902782}
   - component: {fileID: 1342591510801902755}
+  - component: {fileID: 8280518835347222761}
   m_Layer: 0
   m_Name: Jugador
   m_TagString: Untagged
@@ -149,9 +150,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.06596186, y: 0}
   serializedVersion: 2
-  m_Radius: 0.4
+  m_Radius: 0.2063701
 --- !u!212 &1342591510801902752
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -216,6 +217,14 @@ MonoBehaviour:
   currentBullets: 0
   maxHealth: 3
   currentHealth: 3
+  recarga: {fileID: 0}
+  tresbalas: {fileID: 0}
+  dosbalas: {fileID: 0}
+  unabala: {fileID: 0}
+  mensajeMuerte: {fileID: 0}
+  vida1: {fileID: 0}
+  vida2: {fileID: 0}
+  vida3: {fileID: 0}
 --- !u!114 &1342591510801902755
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -231,3 +240,48 @@ MonoBehaviour:
   target: {fileID: 0}
   rotationSpeed: 10
   forwardSide: 1
+--- !u!60 &8280518835347222761
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1342591510801902754}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.64, y: 0.64}
+    newSize: {x: 0.64, y: 0.64}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.14, y: 0.049999997}
+      - {x: 0.14, y: 0.06}
+      - {x: 0.14, y: 0.049999997}
+      - {x: 0.17, y: 0.01}
+      - {x: 0.16, y: -0.03}
+      - {x: 0.16, y: -0.06}
+      - {x: 0.17, y: -0.089999996}
+      - {x: 0.26, y: -0.12}
+      - {x: 0.26999998, y: -0.06}
+      - {x: 0.19339912, y: 0.2257445}
+      - {x: -0.038722012, y: 0.16616584}
+      - {x: -0.04063228, y: 0.1257444}
+      - {x: -0.14, y: 0.06}
+      - {x: -0.14, y: -0.14999999}
+      - {x: -0.049999997, y: -0.21}
+      - {x: -0.01, y: -0.22}
+      - {x: 0.08, y: -0.22}
+      - {x: 0.12, y: -0.14}
+      - {x: 0.16, y: -0.049999997}
+      - {x: 0.16, y: -0.01}
