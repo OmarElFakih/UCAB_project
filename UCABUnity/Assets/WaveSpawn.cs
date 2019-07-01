@@ -8,6 +8,7 @@ public class WaveSpawn : MonoBehaviour
 {
 
 
+    public GameObject nextWaveLabels;
 
     public enum SpawnState {SPAWNING,WAITING,COUNTING}
 	
@@ -48,7 +49,8 @@ public class WaveSpawn : MonoBehaviour
 	   {
 		   if (EnemyisAlive() == false)
 		   {
-                Debug.Log("VICTORIA");
+               Debug.Log("VICTORIA");
+              nextWaveLabels.SetActive(true);
                 WaveCompleted();
                 
                
@@ -112,6 +114,7 @@ public class WaveSpawn : MonoBehaviour
    IEnumerator SpawnWave(Wave _wave)
    {
 	   Debug.Log("Spawning");
+        
 	   state = SpawnState.SPAWNING;
 	   for (int i=0; i<=_wave.count;i++)
 	   {
@@ -129,7 +132,7 @@ public class WaveSpawn : MonoBehaviour
         {
             Debug.Log("Error");
         }
-
+        nextWaveLabels.SetActive(false);
         Transform _sp = spawnPoints[Random.Range(0,spawnPoints.Length)];
         Instantiate(_enemy,_sp.position, _sp.rotation);
    }

@@ -9,6 +9,7 @@ TagManager:
   - Jugador
   - wavelabel
   - text
+  - Enemy
   layers:
   - Default
   - TransparentFX

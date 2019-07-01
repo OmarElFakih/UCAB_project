@@ -10,7 +10,7 @@ public class ControlDeCanvas : MonoBehaviour
     public static bool GameIsPaused = false;
     public GameObject pauseMenuUI;
     public GameObject pauseButtonUI;
-    public GameObject recarga;
+   // public GameObject recarga;
     private string pauseButton;
 
 

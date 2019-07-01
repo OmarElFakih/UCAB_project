@@ -203,7 +203,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Next Wave
+  m_Text: Good Luck
 --- !u!222 &15499343
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -675,8 +675,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 25, y: 36}
-  m_SizeDelta: {x: 330.7, y: 124}
+  m_AnchoredPosition: {x: -7.6, y: 200}
+  m_SizeDelta: {x: 282, y: 139.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &181906113
 Animator:
@@ -710,7 +710,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.3207547, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.7924528, g: 0.66162336, b: 0.66162336, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -728,9 +728,9 @@ MonoBehaviour:
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Next Wave
+  m_Text: Preparase  Next Wave
 --- !u!222 &181906115
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -972,7 +972,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 213275112}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 214b64aa83d7b2249a2aa224b092fcae, type: 3}
   m_Name: 
@@ -1033,35 +1033,40 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 213275112}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 49df510d8979a0b4fbe9d64b0288eb06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waypoints: []
-  testEnemyPrefab: {fileID: 1809783101019269476, guid: 2673afef5f595544598646f24c836813,
-    type: 3}
+  nextWaveLabels: {fileID: 181906111}
   waves:
-  - enemyPrefab: {fileID: 1809783101019269476, guid: 2673afef5f595544598646f24c836813,
-      type: 3}
-    spawnInterval: 1
-    maxEnemies: 5
-  - enemyPrefab: {fileID: 1809783101019269476, guid: 2673afef5f595544598646f24c836813,
-      type: 3}
-    spawnInterval: 1
-    maxEnemies: 10
-  - enemyPrefab: {fileID: 1809783101019269476, guid: 2673afef5f595544598646f24c836813,
-      type: 3}
-    spawnInterval: 1
-    maxEnemies: 15
-  - enemyPrefab: {fileID: 1809783101019269476, guid: 2673afef5f595544598646f24c836813,
-      type: 3}
-    spawnInterval: 2
-    maxEnemies: 20
-  - enemyPrefab: {fileID: 1809783101019269476, guid: 2673afef5f595544598646f24c836813,
-      type: 3}
-    spawnInterval: 3
-    maxEnemies: 30
+  - name: Invasion
+    enemy: {fileID: 1809783101019269479, guid: 2673afef5f595544598646f24c836813, type: 3}
+    rate: 1
+    count: 1
+  - name: Invasion
+    enemy: {fileID: 1809783101019269479, guid: 2673afef5f595544598646f24c836813, type: 3}
+    rate: 1
+    count: 2
+  - name: Invasion
+    enemy: {fileID: 1809783101019269479, guid: 2673afef5f595544598646f24c836813, type: 3}
+    rate: 1
+    count: 3
+  - name: Invasion
+    enemy: {fileID: 1809783101019269479, guid: 2673afef5f595544598646f24c836813, type: 3}
+    rate: 1
+    count: 4
+  - name: Invasion
+    enemy: {fileID: 1809783101019269479, guid: 2673afef5f595544598646f24c836813, type: 3}
+    rate: 1
+    count: 5
+  spawnPoints:
+  - {fileID: 205258949}
+  - {fileID: 934514083}
+  - {fileID: 1467408443}
+  - {fileID: 1354714614}
+  - {fileID: 815033426}
+  - {fileID: 678444563}
   timeBetweenWaves: 10
 --- !u!1 &282147769
 GameObject:
@@ -1329,7 +1334,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &462266876
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2581,7 +2586,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1102068922
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2794,7 +2799,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1167082297
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3453,7 +3458,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 108138867}
   pauseButtonUI: {fileID: 332626216}
-  recarga: {fileID: 0}
 --- !u!1 &1467408442
 GameObject:
   m_ObjectHideFlags: 0
@@ -3945,11 +3949,11 @@ MonoBehaviour:
     lineCount: 4
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 1
+  m_havePropertiesChanged: 0
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 1
+  m_isInputParsingRequired: 0
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -4136,6 +4140,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1342591510801902754, guid: 0f17ab12d2fa6294f8b4b07ef03ce205,
+        type: 3}
+      propertyPath: m_Name
+      value: Jugador
+      objectReference: {fileID: 0}
+    - target: {fileID: 1342591510801902754, guid: 0f17ab12d2fa6294f8b4b07ef03ce205,
+        type: 3}
+      propertyPath: m_TagString
+      value: Jugador
+      objectReference: {fileID: 0}
     - target: {fileID: 1342591510801902782, guid: 0f17ab12d2fa6294f8b4b07ef03ce205,
         type: 3}
       propertyPath: recarga
@@ -4186,16 +4200,6 @@ PrefabInstance:
       propertyPath: recargar
       value: 
       objectReference: {fileID: 189340404}
-    - target: {fileID: 1342591510801902754, guid: 0f17ab12d2fa6294f8b4b07ef03ce205,
-        type: 3}
-      propertyPath: m_Name
-      value: Jugador
-      objectReference: {fileID: 0}
-    - target: {fileID: 1342591510801902754, guid: 0f17ab12d2fa6294f8b4b07ef03ce205,
-        type: 3}
-      propertyPath: m_TagString
-      value: Jugador
-      objectReference: {fileID: 0}
     - target: {fileID: 1342591510801902753, guid: 0f17ab12d2fa6294f8b4b07ef03ce205,
         type: 3}
       propertyPath: m_LocalPosition.x

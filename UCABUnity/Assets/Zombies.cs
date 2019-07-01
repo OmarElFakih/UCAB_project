@@ -48,6 +48,7 @@ public class Zombies : MonoBehaviour
             case "Jugador":
                 SpawnControl.spawnAllowed = false;
                 Destroy(col.gameObject);
+                Instantiate(blood, transform.position, Quaternion.identity); //Aqui muestra perfectamente la animacion de la sangre
                 vida.SetActive(false);   //Aquí deveria desactivar el sprite del corazon pero no hace nada
                 muerte.SetActive(true); //Aqui deveria mostrar el mensaje de muerte después de destruir al jugador
                 break;                  //pero no hace nada, deja todo igual
