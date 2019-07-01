@@ -27,7 +27,7 @@ public class ZombieControl : MonoBehaviour
         // Designa target como Jugador
         target = GameObject.Find("Jugador");
         rb = GetComponent<Rigidbody2D>();
-        moveSpeed = Random.Range(0.5f, 1f);  // Da un rango para la velocidad del movimiento de los zombie
+        moveSpeed = Random.Range(0.2f,1f);  // Da un rango para la velocidad del movimiento de los zombie
 
     }
 
@@ -63,9 +63,6 @@ public class ZombieControl : MonoBehaviour
     }
 
 
-
-
-    
 
 
     public void SetColliderForSprite(int spriteNum)

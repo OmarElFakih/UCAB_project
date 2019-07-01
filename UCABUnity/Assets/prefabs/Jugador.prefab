@@ -217,14 +217,11 @@ MonoBehaviour:
   currentBullets: 0
   maxHealth: 3
   currentHealth: 3
-  recarga: {fileID: 0}
+  recargar: {fileID: 0}
   tresbalas: {fileID: 0}
   dosbalas: {fileID: 0}
   unabala: {fileID: 0}
-  mensajeMuerte: {fileID: 0}
-  vida1: {fileID: 0}
-  vida2: {fileID: 0}
-  vida3: {fileID: 0}
+  cerobalas: {fileID: 0}
 --- !u!114 &1342591510801902755
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -12,7 +12,7 @@ public class DatosGuardados : MonoBehaviour
     public Text HighScore;
     //
         public static int puntajeactual = 0;
-        public  int puntajeMaximo;
+        public  float puntajeMaximo;
     //
     //public float puntos ;
 
@@ -20,11 +20,12 @@ public class DatosGuardados : MonoBehaviour
 
     void Start()
     {
+		puntajeactual = 0;
         Score = GetComponent<Text>();
-       // puntajeMaximo = PlayerPrefs.GetFloat("HighScore", 0f);
-      /*{
+        puntajeMaximo = PlayerPrefs.GetFloat("HighScore", 0f);
+      {
             puntajeMaximo = PlayerPrefs.GetFloat("HighScore");
-        }*/
+        }
     }
 
     void Update()
@@ -41,7 +42,7 @@ public class DatosGuardados : MonoBehaviour
         if (puntajeactual > puntajeMaximo)
         {
             puntajeMaximo = puntajeactual;
-          //  PlayerPrefs.SetFloat("HighScore", puntajeMaximo);
+            PlayerPrefs.SetFloat("HighScore", puntajeMaximo);
         }
 
         

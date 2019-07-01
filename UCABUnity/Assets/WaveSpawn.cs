@@ -9,6 +9,7 @@ public class WaveSpawn : MonoBehaviour
 
 
     public GameObject nextWaveLabels;
+	
 
     public enum SpawnState {SPAWNING,WAITING,COUNTING}
 	
