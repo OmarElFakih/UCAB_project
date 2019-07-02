@@ -4265,6 +4265,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Jugador
       objectReference: {fileID: 0}
+    - target: {fileID: 1342591510801902754, guid: 0f17ab12d2fa6294f8b4b07ef03ce205,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1342591510801902782, guid: 0f17ab12d2fa6294f8b4b07ef03ce205,
         type: 3}
       propertyPath: recarga
